@@ -1,0 +1,5 @@
+flask
+waitress==2.0.0
+Paste==3.5.0
+black
+isort

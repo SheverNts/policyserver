@@ -1,0 +1,4 @@
+RULE_PATH = ""
+VERSION = "0.0.1"
+PORT = 8081
+ROOT_PATH = "/ps/v1"
