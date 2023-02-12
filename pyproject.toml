@@ -1,18 +1,51 @@
 [project]
 name = "policyserver"
+
 version = "0.0.1"
+
 authors = [
   { name="Shever Natsai", email="shevernts@gmail.com" },
 ]
-description = "A small example package"
+
+maintainers = [{ name="Shever Natsai", email="shevernts@gmail.com"  }]
+description = "Policy Server is a policy engine is written in python inspired by OPA"
+
 readme = "README.md"
+
 requires-python = ">=3.7"
+
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: GNU License",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
     "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities",
 ]
+
+
+dependencies = [
+    "Flask==2.2.2",
+    "waitress==2.0.0",
+    "Paste==3.5.0"
+    ]
 
 [project.urls]
 "Homepage" = "https://github.com/SheverNts/policyserver"
 "Bug Tracker" = "https://github.com/SheverNts/policyserver/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+policyserver = 'policyserver.cli:main'
+
+
+[project.optional-dependencies]
+test = [
+    "Flask==2.2.2",
+    "waitress==2.0.0",
+    "Paste==3.5.0",
+    "black",
+    "isort",
+    ]

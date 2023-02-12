@@ -4,3 +4,4 @@ bin
 pyvenv.cfg
 *.egg-info
 __pycache__
+dist
